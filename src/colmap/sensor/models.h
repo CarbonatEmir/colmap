@@ -65,6 +65,9 @@ namespace colmap {
 //
 //  - `ImgFromCam`: Projects points in camera frame to pixel coordinates in
 //    image plane (the inverse of `CamFromImg`). Assumes that the camera
+//     Note: COLMAP assumes pixel centers at (0.5, 0.5).
+//     When importing camera parameters from OpenCV,
+//     be aware of possible coordinate origin differences.
 //    coordinates are given as (u, v, w). Returns false, if projection failed.
 //  - `CamFromImg`: lift pixel coordinates in image plane to normalized camera
 //    coordinates (the inverse of `ImgFromCam`). Produces camera coordinates
